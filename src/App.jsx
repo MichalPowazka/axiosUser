@@ -1,36 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Login from './pages/Login'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <main class="form-signin w-100 m-auto">
-    <form>
-      <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-  
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-        <label for="floatingPassword">Password</label>
-      </div>
-  
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault"/>
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
-      </div>
-      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
-    </form>
-  </main>
+    <div className="app">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Home</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">Login</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main className="form-signin w-100 m-auto">
+      <Login/>
+    </main>
+  </div>
   )
 }
 
